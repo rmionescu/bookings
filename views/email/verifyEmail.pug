@@ -1,0 +1,16 @@
+extends baseEmail
+
+block content 
+  p Hello,
+  p Thanks for creating a Premium Excursion account. Verify your email so you can get up and running quickly.
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Verify email
+  p Once your email is verified, you can start setting up your account.
+  p - Razvan Ionescu, CEO
