@@ -164,10 +164,10 @@ tourSchema.pre(/^find/, function(next) {
   next();
 });
 
-tourSchema.post(/^find/, function(docs, next) {
-  console.log(`Find query took ${Date.now() - this.start_t}ms..`);
-  next();
-});
+// tourSchema.post(/^find/, function(docs, next) {
+//   // console.log(`Find query took ${Date.now() - this.start_t}ms..`);
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE: exclude secret tours
 tourSchema.pre('aggregate', function(next) {

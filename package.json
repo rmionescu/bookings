@@ -8,13 +8,14 @@
     "start:prod": "SET NODE_ENV=production && nodemon server.js",
     "debug": "ndb server.js",
     "watch": "esbuild ./public/js/index.js --bundle --outfile=./public/js/bundle.js --watch",
-    "build": "esbuild ./public/js/index.js --bundle --outfile=./public/js/bundle.js"
+    "build": "esbuild ./public/js/index.js --bundle --minify --sourcemap --outfile=./public/js/bundle.js --define:process.env.NODE_ENV='\"production\"'"
   },
   "author": "Razvan Ionescu",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.9.0",
     "bcryptjs": "^3.0.2",
+    "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "core-js": "^3.42.0",
     "dotenv": "^16.4.7",
